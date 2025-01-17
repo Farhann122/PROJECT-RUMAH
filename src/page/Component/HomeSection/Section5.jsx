@@ -4,7 +4,7 @@ import orang from "../../../assets/orang.jpg";
 
 const Section5 = () => {
   return (
-    <div className="bg-gray-50 py-16 mb-28">
+    <div className="bg-gray-50 py-16 pb-28">
       {/* Heading Section */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-black">Pelanggan yang Puas</h1>
