@@ -3,21 +3,58 @@ import LOGO from "../../assets/LOGO.png";
 
 const Navbar = () => {
   return (
-    <main className="flex justify-between items-center w-full h-28 pt-8 ">
-      <div className="flex items-center ml-32">
-        <img src={LOGO} alt="logo" className="w-32 h-32" />
-        <h1 className="text-black text-2xl font-bold ">Lorem <span className="text-amber-900">Ipsum</span></h1>
-      </div>
-      <div className="flex items-center">
-        <div className="flex items-center gap-4 mr-32 text-gray-500">
-          <h1>Beranda</h1>
-          <h1>Tentang</h1>
-          <h1>Layanan</h1>
-          <h1>Karya</h1>
-          <h1>Kontak</h1>
+    <nav className="fixed top-0 left-0 w-full bg-slate-50 shadow-md z-50">
+      <div className="flex justify-between items-center w-full h-20 px-8 lg:px-32">
+        {/* Logo */}
+        <div className="flex items-center">
+          <img src={LOGO} alt="logo" className="w-12 h-12" />
+          <h1 className="text-black text-2xl font-bold ml-4">
+            Lorem <span className="text-amber-900">Ipsum</span>
+          </h1>
+        </div>
+
+        
+        <div className="hidden md:flex items-center space-x-8 text-gray-600 font-medium">
+          <a
+            href="#home"
+            className="hover:text-amber-900 transition duration-300"
+          >
+            Beranda
+          </a>
+          <a
+            href="#about"
+            className="hover:text-amber-900 transition duration-300"
+          >
+            Tentang
+          </a>
+          <a
+            href="#services"
+            className="hover:text-amber-900 transition duration-300"
+          >
+            Layanan
+          </a>
+          <a
+            href="#projects"
+            className="hover:text-amber-900 transition duration-300"
+          >
+            Karya
+          </a>
+          <a
+            href="#contact"
+            className="hover:text-amber-900 transition duration-300"
+          >
+            Kontak
+          </a>
+        </div>
+
+        
+        <div className="md:hidden flex items-center">
+          <button className="text-gray-600 focus:outline-none">
+          
+          </button>
         </div>
       </div>
-    </main>
+    </nav>
   );
 };
 
