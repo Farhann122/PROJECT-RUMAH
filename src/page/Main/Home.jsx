@@ -1,38 +1,30 @@
 import React from "react";
 import Navbar from "../Component/Navbar";
-import Section1 from "../Component/Section1";
-import Section2 from "../Component/Section2";
-import Section3 from "../Component/Section3";
-import Section4 from "../Component/Section4";
-import Section5 from "../Component/Section5";
-import Section6 from "../Component/Section6";
+import Section1 from "../Component/HomeSection/Section1";
+import Section2 from "../Component/HomeSection/Section2";
+import Section3 from "../Component/HomeSection/Section3";
+import Section4 from "../Component/HomeSection/Section4";
+import Section5 from "../Component/HomeSection/Section5";
+import Section6 from "../Component/HomeSection/Section6";
+import Section7 from "../Component/HomeSection/Section7";
+import Footer from "../Component/Footer";
+
+
+
 
 const Home = () => {
   return (
     <main className="w-full min-h-screen bg-slate-50">
-      <div>
-        <Navbar />
-      </div>
-      <div>
-        <Section1 />
-      </div>
-      <div>
-        <Section2 />
-      </div>
-
-      <div>
-        <Section3 />
-      </div>
-
-      <div>
-        <Section4 />
-      </div>
-      <div>
-        <Section5 />
-      </div>
-      <div>
-        <Section6 />
-      </div>
+   <Navbar/>
+   <Section1/>
+    
+      <Section2/>
+      <Section3 />
+      <Section4 />
+      <Section5 />
+      <Section6 />
+      <Section7 />
+      <Footer />
     </main>
   );
 };

@@ -3,7 +3,7 @@ import LOGO from "../../assets/LOGO.png";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 w-full bg-slate-50 shadow-md z-50">
+    <nav className="fixed top-0 left-0 w-full bg-slate-50  z-50">
       <div className="flex justify-between items-center w-full h-20 px-8 lg:px-32">
         {/* Logo */}
         <div className="flex items-center">
@@ -16,19 +16,19 @@ const Navbar = () => {
         
         <div className="hidden md:flex items-center space-x-8 text-gray-600 font-medium">
           <a
-            href="#home"
+            href="/home"
             className="hover:text-amber-900 transition duration-300"
           >
             Beranda
           </a>
           <a
-            href="#about"
+            href="/tentang"
             className="hover:text-amber-900 transition duration-300"
           >
             Tentang
           </a>
           <a
-            href="#services"
+            href="/layanan"
             className="hover:text-amber-900 transition duration-300"
           >
             Layanan
