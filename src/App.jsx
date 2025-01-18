@@ -12,13 +12,17 @@ import Interior from "./page/Component/LayananSection/LayananInterior/Interior";
 import Eksterior from "./page/Component/LayananSection/LayananEksterior/Eksterior";
 import Taman from "./page/Component/LayananSection/LayananTaman/Taman";
 import RuangTamu from "./page/Component/LayananSection/LayananRuangTamu/RuangTamu";
+import PageNotFound from "./page/Component/PageNotFound";
 
 const App = () => {
   return (
     <>
       <ScrollToTop />
       <Routes>
-        <Route path="/Home" element={<Home />} />
+       
+
+       {/* jadikan home index */}
+       <Route path="/" element={<Home />} />
         <Route path="/Tentang" element={<Tentang />} />
         <Route path="/Layanan" element={<Layanan />} />
         <Route path="/Karya" element={<Karya />} />
@@ -29,6 +33,9 @@ const App = () => {
         <Route path="/layanan/Eksterior" element={<Eksterior />} />
         <Route path="/layanan/Taman" element={<Taman />} />
         <Route path="/layanan/RuangTamu" element={<RuangTamu />} />
+
+     
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </>
   );

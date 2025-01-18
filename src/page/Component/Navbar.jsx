@@ -16,7 +16,7 @@ const Navbar = () => {
         
         <div className="hidden md:flex items-center space-x-8 text-gray-600 font-medium">
           <a
-            href="/home"
+            href="/"
             className="hover:text-amber-900 transition duration-300"
           >
             Beranda
