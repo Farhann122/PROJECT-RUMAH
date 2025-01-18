@@ -1,31 +1,38 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import layanandapur from '../../../assets/layanandapur.jpg'
 import layanantoilet from '../../../assets/layanantoilet.jpg'
 import layananinterior from '../../../assets/layananinterior.jpg'
 import { useNavigate } from 'react-router-dom'
+import Aos from 'aos'
 
 
 const Section4 = () => {
   const navigate = useNavigate();
-
   const handleLayanan = () => {
     navigate("/layanan");
   }
+   useEffect
+     (() => {
+        Aos.init({
+          duration: 1400,
+          once: true,
+        });
+      }, []);
   return (
       <div className="pt-16 bg-gray-100">
            <div className="flex justify-center">
-             <h1 className="text-black text-4xl font-bold pt-6">
+             <h1 className="text-black text-4xl font-bold pt-6" data-aos="fade-up">
                Layanan Kami Mencakup
              </h1>
            </div>
    
            <div className="ml-32 mr-32 pt-20 min-h-screen flex justify-center gap-5">
              {/* Layanan Dapur */}
-             <div className="relative w-[500px] h-[600px] overflow-hidden rounded-xl">
+             <div className="relative w-[500px] h-[600px] overflow-hidden rounded-xl" >
                <img
                  src={layanandapur}
                  alt="Dapur"
-                 className="w-full h-full object-cover brightness-50"
+                 className="w-full h-full object-cover brightness-50" data-aos="fade-up"
                />
                <div className="absolute inset-0 flex items-center justify-center">
                  <h1 className="text-white text-3xl font-bold">Dapur</h1>
@@ -37,7 +44,7 @@ const Section4 = () => {
                <img
                  src={layanantoilet}
                  alt="Toilet"
-                 className="w-full h-full object-cover brightness-50"
+                 className="w-full h-full object-cover brightness-50"data-aos="fade-up"
                />
                <div className="absolute inset-0 flex items-center justify-center">
                  <h1 className="text-white text-3xl font-bold">Kamar Mandi</h1>
@@ -49,7 +56,7 @@ const Section4 = () => {
                <img
                  src={layananinterior}
                  alt="Interior"
-                 className="w-full h-full object-cover brightness-50"
+                 className="w-full h-full object-cover brightness-50" data-aos="fade-up"
                />
                <div className="absolute inset-0 flex items-center justify-center">
                  <h1 className="text-white text-3xl font-bold">Interior</h1>

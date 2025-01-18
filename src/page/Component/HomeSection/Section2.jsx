@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import dapur from "../../../assets/dapur.jpg";
 import { useNavigate } from "react-router-dom";
+import Aos from "aos";
 
 const Section2 = () => {
   const navigate = useNavigate();
@@ -8,9 +9,15 @@ const Section2 = () => {
   const handleTentang = () => {
     navigate("/tentang");
   };
+   useEffect(() => {
+      Aos.init({
+        duration: 1400,
+        once: true,
+      });
+    }, []);
  
   return (
-    <div className="flex justify-center items-center pt-12 ml-32 mr-32">
+    <div className="flex justify-center items-center pt-12 ml-32 mr-32" data-aos="fade-up">
       {/* Gambar Dapur */}
       <div
         className="w-1/2 h-[600px]  bg-center bg-cover rounded-xl shadow-lg"

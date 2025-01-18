@@ -1,9 +1,17 @@
-import React from 'react'
+import Aos from 'aos';
+import React, { useEffect } from 'react'
 
 const Section3 = () => {
+   useEffect
+   (() => {
+      Aos.init({
+        duration: 1200,
+        once: true,
+      });
+    }, []);
   return (
-     <div className="pt-16 mb-24 ">
-           <div className="text-center mb-12">
+     <div className="pt-16 mb-24 "data-aos="zoom-in-down">
+           <div className="text-center mb-12" >
              <h1 className="text-4xl font-bold ">Alasan Memilih Kami</h1>
              <p className="text-gray-600 mt-4">
                Kami memberikan layanan terbaik dengan keunggulan yang tidak bisa

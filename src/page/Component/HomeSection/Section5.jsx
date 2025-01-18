@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import orang from "../../../assets/orang.jpg";
+import Aos from "aos";
 
 
 const Section5 = () => {
+   useEffect
+       (() => {
+          Aos.init({
+            duration: 1400,
+            once: true,
+          });
+        }, []);
   return (
-    <div className="bg-gray-50 py-16 pb-28">
+    <div className="bg-gray-50 py-16 pb-28" data-aos="fade-up">
       {/* Heading Section */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-black">Pelanggan yang Puas</h1>
