@@ -34,13 +34,13 @@ const Navbar = () => {
             Layanan
           </a>
           <a
-            href="#projects"
+            href="/karya"
             className="hover:text-amber-900 transition duration-300"
           >
             Karya
           </a>
           <a
-            href="#contact"
+            href="/kontak"
             className="hover:text-amber-900 transition duration-300"
           >
             Kontak

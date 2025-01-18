@@ -2,9 +2,15 @@ import React from 'react'
 import layanandapur from '../../../assets/layanandapur.jpg'
 import layanantoilet from '../../../assets/layanantoilet.jpg'
 import layananinterior from '../../../assets/layananinterior.jpg'
+import { useNavigate } from 'react-router-dom'
 
 
 const Section4 = () => {
+  const navigate = useNavigate();
+
+  const handleLayanan = () => {
+    navigate("/layanan");
+  }
   return (
       <div className="pt-16 bg-gray-100">
            <div className="flex justify-center">
@@ -51,7 +57,7 @@ const Section4 = () => {
              </div>
            </div>
            <div className="flex justify-center relative bottom-32 ">
-             <button className="bg-black w-[200px] h-[40px] hover:bg-amber-800">
+             <button onClick={handleLayanan} className="bg-black w-[200px] h-[40px] hover:bg-amber-800">
                <h1 className="text-white font-extralight">Lihat Semua Layanan</h1>
              </button>
            </div>

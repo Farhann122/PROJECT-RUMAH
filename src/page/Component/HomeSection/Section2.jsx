@@ -1,8 +1,14 @@
 import React from "react";
 import dapur from "../../../assets/dapur.jpg";
-
+import { useNavigate } from "react-router-dom";
 
 const Section2 = () => {
+  const navigate = useNavigate();
+
+  const handleTentang = () => {
+    navigate("/tentang");
+  };
+ 
   return (
     <div className="flex justify-center items-center pt-12 ml-32 mr-32">
       {/* Gambar Dapur */}
@@ -25,7 +31,10 @@ const Section2 = () => {
           pilihan utama bagi mereka yang mencari kualitas dan inovasi dalam
           renovasi rumah.
         </p>
-        <button className="mt-8 ml-36 w-[170px] h-[45px] bg-black text-white  hover:bg-amber-800 transition">
+        <button
+          onClick={handleTentang}
+          className="mt-8 ml-36 w-[170px] h-[45px] bg-black text-white  hover:bg-amber-800 transition"
+        >
           Tentang Kami
         </button>
       </div>

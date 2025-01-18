@@ -5,8 +5,13 @@ import interior from "../../../assets/interior.jpg";
 import eksterior from "../../../assets/eksterior.jpg";
 import tentang from "../../../assets/tentang.jpg";
 import garden from "../../../assets/garden.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Layanan1 = () => {
+    const navigate = useNavigate();
+    const handleSemuaLayanan = (path) => {
+      navigate(path);
+    };
   return (
     <main className="pt-40 min-h-screen bg-slate-50">
       <div className="justify-center flex flex-col items-center gap-4">
@@ -17,8 +22,9 @@ const Layanan1 = () => {
       </div>
       <div className="grid grid-cols-3  px-20 py-16 gap-16">
         <div className=" h-[400px]">
-          <div>
+          <div className="cursor-pointer hover:scale-110 transition-all">
             <img
+          onClick={() => handleSemuaLayanan("/layanan/Dapur")}
               src={dapur}
               className="bg-cover bg-no-repeat h-[400px]"
               alt=""
@@ -35,8 +41,9 @@ const Layanan1 = () => {
           </div>
         </div>
         <div className=" h-[400px]">
-          <div>
+          <div className="cursor-pointer hover:scale-110 transition-all">
             <img
+            onClick={() => handleSemuaLayanan("/layanan/KamarMandi")}
               src={bathroom}
               className="bg-cover bg-no-repeat h-[400px]"
               alt=""
@@ -55,8 +62,9 @@ const Layanan1 = () => {
           </div>
         </div>
         <div className=" h-[400px]">
-          <div>
+          <div className="cursor-pointer hover:scale-110 transition-all">
             <img
+            onClick={() => handleSemuaLayanan("/layanan/Interior")}
               src={interior}
               className="bg-cover bg-no-repeat h-[400px]"
               alt=""
@@ -77,8 +85,9 @@ const Layanan1 = () => {
       </div>
       <div className="grid grid-cols-3  px-20 py-16 gap-16 pt-72 pb-72">
         <div className=" h-[400px]">
-          <div>
+          <div className="cursor-pointer hover:scale-110 transition-all">
             <img
+            onClick={() => handleSemuaLayanan("/layanan/Eksterior")}
               src={eksterior}
               className="bg-cover bg-no-repeat h-[400px]"
               alt=""
@@ -95,8 +104,9 @@ const Layanan1 = () => {
           </div>
         </div>
         <div className=" h-[400px]">
-          <div>
+          <div className="cursor-pointer hover:scale-110 transition-all">
             <img
+            onClick={() => handleSemuaLayanan("/layanan/Taman")}
               src={garden}
               className="bg-cover bg-no-repeat h-[400px]"
               alt=""
@@ -115,8 +125,9 @@ const Layanan1 = () => {
           </div>
         </div>
         <div className=" h-[400px]">
-          <div>
+          <div className="cursor-pointer hover:scale-110 transition-all">
             <img
+            onClick={() => handleSemuaLayanan("/layanan/RuangTamu")}
               src={tentang}
               className="bg-cover bg-no-repeat h-[400px]"
               alt=""
